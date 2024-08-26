@@ -8,6 +8,8 @@ authors = ["Your Name <you@example.com>"]
 python = "^3.10"
 fastapi = "^0.111.0"
 pytest = "^8.2.1"
+SQLAlchemy = "^2.0.32"
+pydantic-settings = "^2.4.0"
 
 [tool.poetry.dev-dependencies]
 
