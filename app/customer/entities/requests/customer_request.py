@@ -7,3 +7,4 @@ class CustomerRequest(BaseModel):
     lastName: str
     phoneNumber: str
     email: str
+    password: str

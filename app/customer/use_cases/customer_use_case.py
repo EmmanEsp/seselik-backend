@@ -14,6 +14,7 @@ class CustomerUseCase:
             first_name=customer.firstName,
             last_name=customer.lastName,
             phone_number=customer.phoneNumber,
-            email=customer.email
+            email=customer.email,
+            password=customer.password
         )
         self.customer_service.create_customer(new_customer)
