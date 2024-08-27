@@ -7,7 +7,7 @@ from app.customer.entities.models.ship_address_model import ShipAddressModel
 
 class ShipAddressUseCase:
     
-    def __init__(self, ship_address_service: ShipAddressService = Depends(ShipAddressService)) -> None:
+    def __init__(self, ship_address_service: ShipAddressService = Depends()) -> None:
         self.ship_address_service = ship_address_service
     
     def get_all_ship_address_by_customer_id(self, customer_id: int) -> list[ShipAddressResponse]:

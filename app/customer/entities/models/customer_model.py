@@ -14,3 +14,4 @@ class CustomerModel(Base):
     email = Column(String, nullable=False, unique=True)
     
     addresses = relationship("ShipAddressModel", back_populates="customer")
+    card_payments = relationship("CardPaymentModel", back_populates="customer")

@@ -2,7 +2,8 @@ from pydantic import BaseModel
 
 
 class CustomerRequest(BaseModel):
-    first_name: str
-    last_name: str
-    phone_number: str
+    
+    firstName: str
+    lastName: str
+    phoneNumber: str
     email: str
