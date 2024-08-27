@@ -9,10 +9,7 @@ class CustomerService:
     
     def __init__(self, db: Session = Depends(get_db)) -> None:
         self._db = db
-    
-    def get_all_customers(self) -> list[CustomerModel]:
-        return self._db.query(CustomerModel).all()
-    
+        
     def is_email_in_use(self, email: str) -> bool:
         customer = self._db.query(CustomerModel).filter(CustomerModel.email == email).first()
         return customer is not None
