@@ -5,6 +5,6 @@ T = TypeVar("T")
 
 class APIResponse(BaseModel, Generic[T]):
     
-    status: str
+    service_status: str
     status_code: int
     data: T

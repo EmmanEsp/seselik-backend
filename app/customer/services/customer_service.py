@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 
 from app.infraestructure.database import get_db
 from app.customer.entities.models.customer_model import CustomerModel
+from app.customer.entities.exceptions.customer_exception import CustomerException
 
 class CustomerService:
     
@@ -11,3 +12,13 @@ class CustomerService:
     
     def get_all_customers(self) -> list[CustomerModel]:
         return self._db.query(CustomerModel).all()
+    
+    def is_email_in_use(self, email: str) -> bool:
+        customer = self._db.query(CustomerModel).filter(CustomerModel.email == email).first()
+        return customer is not None
+    
+    def create_customer(self, customer: CustomerModel):
+        if self.is_email_in_use(customer.email):
+            raise CustomerException(detail={"email": "Email already in use."})
+        self._db.add(customer)
+        self._db.commit()
