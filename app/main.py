@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
 from app.healthcheck.api.healthcheck_router import healthcheck_router
+from app.customer.api.customer_router import customer_router
 
 
 def init():
@@ -15,6 +16,7 @@ def init():
     )
     
     _app.include_router(healthcheck_router)
+    _app.include_router(customer_router)
     
     return _app
 

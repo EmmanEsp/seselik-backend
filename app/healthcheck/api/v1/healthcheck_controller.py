@@ -1,5 +1,3 @@
-"""Healthcheck API
-"""
 from fastapi import APIRouter, status
 
 from app.healthcheck.entities.responses.get_healthcheck_response import GetHealthcheckResponse
