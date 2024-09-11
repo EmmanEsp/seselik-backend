@@ -1,9 +1,9 @@
 from fastapi import Depends
 
 from app.product.services.product_service import ProductService
-from app.product.entities.responses.product_response import ProductResponse
-from app.product.entities.requests.product_request import ProductRequest
-from app.product.entities.models.product_model import ProductModel
+from app.product.domain.responses.product_response import ProductResponse
+from app.product.domain.requests.product_request import ProductRequest
+from app.product.domain.models.product_model import ProductModel
 
 
 class ProductUseCase:

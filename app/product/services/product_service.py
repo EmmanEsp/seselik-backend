@@ -2,8 +2,8 @@ from fastapi import Depends
 from sqlalchemy.orm import Session
 
 from app.infraestructure.database import get_db
-from app.product.entities.models.product_model import ProductModel
-from app.product.entities.responses.product_response import ProductResponse
+from app.product.domain.models.product_model import ProductModel
+from app.product.domain.responses.product_response import ProductResponse
 
 
 class ProductService:

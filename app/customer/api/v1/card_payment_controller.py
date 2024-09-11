@@ -1,10 +1,10 @@
 from fastapi import APIRouter, status, Depends
 
-from app.entities.responses.api_response import APIResponse
-from app.entities.enums import api_status
+from app.domain.responses.api_response import APIResponse
+from app.domain.enums import api_status
 from app.customer.use_cases.card_payment_use_case import CardPaymentUseCase
-from app.customer.entities.responses.card_payment_response import CardPaymentResponse
-from app.customer.entities.requests.card_payment_request import CardPaymentRequest
+from app.customer.domain.responses.card_payment_response import CardPaymentResponse
+from app.customer.domain.requests.card_payment_request import CardPaymentRequest
 
 card_payment_v1_router = APIRouter()
 

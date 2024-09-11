@@ -1,9 +1,10 @@
 from fastapi import Depends
 
 from app.customer.services.ship_address_service import ShipAddressService
-from app.customer.entities.responses.ship_address_response import ShipAddressResponse
-from app.customer.entities.requests.ship_address_request import ShipAddressRequest
-from app.customer.entities.models.ship_address_model import ShipAddressModel
+from app.customer.domain.responses.ship_address_response import ShipAddressResponse
+from app.customer.domain.requests.ship_address_request import ShipAddressRequest
+from app.customer.domain.models.ship_address_model import ShipAddressModel
+
 
 class ShipAddressUseCase:
     

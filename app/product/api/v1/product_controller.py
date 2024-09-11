@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, status
 
-from app.entities.responses.api_response import APIResponse
-from app.entities.enums import api_status
-from app.product.entities.requests.product_request import ProductRequest
-from app.product.entities.responses.product_response import ProductResponse
+from app.domain.responses.api_response import APIResponse
+from app.domain.enums import api_status
+from app.product.domain.requests.product_request import ProductRequest
+from app.product.domain.responses.product_response import ProductResponse
 from app.product.use_cases.product_use_case import ProductUseCase
 
 product_v1_router = APIRouter()

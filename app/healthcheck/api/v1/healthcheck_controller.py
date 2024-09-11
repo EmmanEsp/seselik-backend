@@ -1,6 +1,6 @@
 from fastapi import APIRouter, status
 
-from app.healthcheck.entities.responses.get_healthcheck_response import GetHealthcheckResponse
+from app.healthcheck.domain.responses.get_healthcheck_response import GetHealthcheckResponse
 
 healthcheck_v1_router = APIRouter()
 

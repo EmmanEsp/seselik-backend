@@ -1,10 +1,10 @@
 from fastapi import APIRouter, status, Depends
 
-from app.entities.responses.api_response import APIResponse
-from app.entities.enums import api_status
+from app.domain.responses.api_response import APIResponse
+from app.domain.enums import api_status
 from app.customer.use_cases.customer_use_case import CustomerUseCase
 from app.customer.api.v1 import customer_documentation
-from app.customer.entities.requests.customer_request import CustomerRequest
+from app.customer.domain.requests.customer_request import CustomerRequest
 
 customer_v1_router = APIRouter()
 

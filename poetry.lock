@@ -296,7 +296,7 @@ dev = ["pre-commit", "tox"]
 testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
-name = "psycopg2"
+name = "psycopg2-binary"
 version = "2.9.9"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
 category = "main"
@@ -584,7 +584,7 @@ python-versions = ">=3.8"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "1ddc91e1943a8c8fc25b91f4eb066737c710e68bb7e195adceca8d24ed67c84c"
+content-hash = "0758beb66898737efe37521e71c1fb23877a988c6d39a3a324a1a632eec05e25"
 
 [metadata.files]
 annotated-types = []
@@ -611,7 +611,7 @@ mdurl = []
 orjson = []
 packaging = []
 pluggy = []
-psycopg2 = []
+psycopg2-binary = []
 pydantic = []
 pydantic-core = []
 pydantic-settings = []

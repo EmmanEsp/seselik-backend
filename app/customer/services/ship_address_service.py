@@ -2,7 +2,7 @@ from fastapi import Depends
 from sqlalchemy.orm import Session
 
 from app.infraestructure.database import get_db
-from app.customer.entities.models.ship_address_model import ShipAddressModel
+from app.customer.domain.models.ship_address_model import ShipAddressModel
 
 
 class ShipAddressService:

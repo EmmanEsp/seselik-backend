@@ -4,8 +4,8 @@ from app.healthcheck.api.healthcheck_router import healthcheck_router
 from app.customer.api.customer_router import customer_router
 from app.product.api.product_router import product_router
 
-from app.customer.entities.exceptions.customer_exception import CustomerException, customer_exception_handler
-from app.entities.exceptions.service_exception import ServiceException, service_exception_handler
+from app.customer.domain.exceptions.customer_exception import CustomerException, customer_exception_handler
+from app.domain.exceptions.service_exception import ServiceException, service_exception_handler
 
 def init():
     """Initialize the app

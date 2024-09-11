@@ -2,7 +2,7 @@ from fastapi import Depends
 from sqlalchemy.orm import Session
 
 from app.infraestructure.database import get_db
-from app.product.entities.models.product_status_model import ProductStatusModel
+from app.product.domain.models.product_status_model import ProductStatusModel
 
 
 class ProductStatusService:

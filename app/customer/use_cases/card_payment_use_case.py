@@ -1,9 +1,10 @@
 from fastapi import Depends
 
 from app.customer.services.card_payment_service import CardPaymentService
-from app.customer.entities.responses.card_payment_response import CardPaymentResponse
-from app.customer.entities.requests.card_payment_request import CardPaymentRequest
-from app.customer.entities.models.card_payment_model import CardPaymentModel
+from app.customer.domain.responses.card_payment_response import CardPaymentResponse
+from app.customer.domain.requests.card_payment_request import CardPaymentRequest
+from app.customer.domain.models.card_payment_model import CardPaymentModel
+
 
 class CardPaymentUseCase:
     

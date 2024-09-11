@@ -1,8 +1,8 @@
 from fastapi import Depends
 
 from app.product.services.product_status_service import ProductStatusService
-from app.product.entities.requests.product_status_request import ProductStatusRequest
-from app.product.entities.responses.product_status_response import ProductStatusResponse
+from app.product.domain.requests.product_status_request import ProductStatusRequest
+from app.product.domain.responses.product_status_response import ProductStatusResponse
 
 
 class ProductStatusUseCase:

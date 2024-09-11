@@ -2,7 +2,7 @@ from fastapi import Depends
 from sqlalchemy.orm import Session
 
 from app.infraestructure.database import get_db
-from app.customer.entities.models.card_payment_model import CardPaymentModel
+from app.customer.domain.models.card_payment_model import CardPaymentModel
 
 class CardPaymentService:
     

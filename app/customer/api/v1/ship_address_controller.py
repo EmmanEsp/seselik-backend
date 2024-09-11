@@ -1,9 +1,9 @@
 from fastapi import APIRouter, status, Depends
 
-from app.entities.responses.api_response import APIResponse
-from app.entities.enums import api_status
-from app.customer.entities.responses.ship_address_response import ShipAddressResponse
-from app.customer.entities.requests.ship_address_request import ShipAddressRequest
+from app.domain.responses.api_response import APIResponse
+from app.domain.enums import api_status
+from app.customer.domain.responses.ship_address_response import ShipAddressResponse
+from app.customer.domain.requests.ship_address_request import ShipAddressRequest
 from app.customer.use_cases.ship_address_use_case import ShipAddressUseCase
 
 ship_address_v1_router = APIRouter()

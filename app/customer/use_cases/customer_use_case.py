@@ -1,8 +1,9 @@
 from fastapi import Depends
 
 from app.customer.services.customer_service import CustomerService
-from app.customer.entities.requests.customer_request import CustomerRequest
-from app.customer.entities.models.customer_model import CustomerModel
+from app.customer.domain.requests.customer_request import CustomerRequest
+from app.customer.domain.models.customer_model import CustomerModel
+
 
 class CustomerUseCase:
     
