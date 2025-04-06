@@ -3,6 +3,7 @@ from fastapi import Depends
 from app.customer.services.customer_service import CustomerService
 from app.customer.domain.requests.customer_request import CustomerRequest
 from app.customer.domain.models.customer_model import CustomerModel
+from app.infraestructure.security import hash_password
 
 
 class CustomerUseCase:
@@ -11,11 +12,6 @@ class CustomerUseCase:
         self.customer_service = customer_service
 
     def create_customer(self, customer: CustomerRequest):
-        new_customer = CustomerModel(
-            first_name=customer.firstName,
-            last_name=customer.lastName,
-            phone_number=customer.phoneNumber,
-            email=customer.email,
-            password=customer.password
-        )
+        customer.password = hash_password(customer.password)
+        new_customer = CustomerModel(**customer.model_dump(by_alias=False))
         self.customer_service.create_customer(new_customer)

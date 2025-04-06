@@ -10,6 +10,8 @@ fastapi = "^0.115.12"
 SQLAlchemy = "^2.0.32"
 pydantic-settings = "^2.4.0"
 psycopg2-binary = "^2.9.9"
+pydantic = {extras = ["email"], version = "^2.11.2"}
+passlib = {extras = ["argon2"], version = "^1.7.4"}
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.2.1"

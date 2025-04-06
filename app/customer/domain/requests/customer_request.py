@@ -1,10 +1,10 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, EmailStr, Field
 
 
 class CustomerRequest(BaseModel):
     
-    firstName: str
-    lastName: str
-    phoneNumber: str
-    email: str
-    password: str
+    first_name: str =  Field(..., alias="firstName")
+    last_name: str = Field(..., alias="lastName")
+    phone_number: str = Field(..., alias="phoneNumber")
+    email: EmailStr = Field(...)
+    password: str = Field(..., description="Contraseña de usuario", min_length=8,  max_length=12)
