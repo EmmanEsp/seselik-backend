@@ -10,12 +10,12 @@ customer_v1_router = APIRouter()
 
 
 @customer_v1_router.post(
-    "",
+    "/signup",
     response_model=APIResponse[None],
     responses=customer_documentation.create_customer_responses,
     status_code=status.HTTP_201_CREATED
 )
-def create_customer(customer: CustomerRequest, use_case: CustomerUseCase = Depends()):
+def sign_up(customer: CustomerRequest, use_case: CustomerUseCase = Depends()):
     """Create a customer
     """
     use_case.create_customer(customer)
