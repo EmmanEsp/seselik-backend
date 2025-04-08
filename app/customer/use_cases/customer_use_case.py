@@ -7,7 +7,6 @@ from app.infraestructure.security import hash_password
 
 
 class CustomerUseCase:
-    
     def __init__(self, customer_service: CustomerService = Depends()) -> None:
         self.customer_service = customer_service
 
