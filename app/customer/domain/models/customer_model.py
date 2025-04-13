@@ -5,7 +5,7 @@ from app.infraestructure.database import Base
 
 
 class CustomerModel(Base):
-    __tablename__ = 'customer'
+    __tablename__ = "customer"
 
     id = Column(Integer, primary_key=True, index=True)
     first_name = Column(String, nullable=False)
@@ -13,6 +13,7 @@ class CustomerModel(Base):
     phone_number = Column(String, nullable=False)
     email = Column(String, nullable=False, unique=True)
     password = Column(String, nullable=False, unique=True)
-    
+    user_type = Column(String, nullable=False, unique=False, default="user")
+
     addresses = relationship("ShipAddressModel", back_populates="customer")
     card_payments = relationship("CardPaymentModel", back_populates="customer")

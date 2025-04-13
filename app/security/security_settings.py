@@ -1,15 +1,15 @@
 from functools import lru_cache
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
-class DatabaseSetting(BaseSettings):
-    
-    database_url: str
-    async_database_url: str
+class SecuritySetting(BaseSettings):
+    secret_key: str
+    access_token_expire_minutes: int
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 
 @lru_cache
-def get_database_setting() -> DatabaseSetting:
-    return DatabaseSetting()
+def get_security_setting() -> SecuritySetting:
+    return SecuritySetting()
